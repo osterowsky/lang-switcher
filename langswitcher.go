@@ -13,7 +13,7 @@ import (
 
 func connectAPI() (*gmail.Service, error) {
 	ctx := context.Background()
-	b, err := os.ReadFile("quickstart/credentials_lang.json")
+	b, err := os.ReadFile("/Users/patrykostern/Documents/Code/LangSwitcher/quickstart/credentials.json")
 	if err != nil {
 		log.Fatalf("Unable to read client secret file: %v", err)
 	}
@@ -60,5 +60,5 @@ func main() {
 	if err != nil {
 		log.Fatalf("Couldn't switch language %v", err)
 	}
-
+	log.Printf("Switched lang")
 }
